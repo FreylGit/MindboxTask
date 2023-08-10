@@ -1,0 +1,30 @@
+
+
+Решение:
+SELECT P.Name AS ProductName, C.Name AS CategoryName
+FROM Products P
+LEFT JOIN ProductCategory PC ON P.ProductId = PC.ProductId
+LEFT JOIN Categories C ON PC.CategoryId = C.CategoryId;
+
+
+
+Таблицы:
+CREATE TABLE Products (
+    ProductId int PRIMARY KEY,
+    Name nvarchar(50)
+);
+
+CREATE TABLE Categories (
+    CategoryId int PRIMARY KEY,
+    Name nvarchar(50)
+);
+
+
+CREATE TABLE ProductCategory (
+    ProductId int,
+    CategoryId int,
+    FOREIGN KEY (ProductId) REFERENCES Products(ProductId),
+    FOREIGN KEY (CategoryId) REFERENCES Categories(CategoryId),
+    PRIMARY KEY (ProductId, CategoryId)
+);
+Заполни эти таблицы тестовыми данными
