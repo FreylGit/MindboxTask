@@ -1,8 +1,11 @@
 ﻿namespace TaskLibrary
 {
+    /// <summary>
+    /// Круг
+    /// </summary>
     public struct Circle : IShape
     {
-        private double _radius { get; }
+        private double _radius;
 
         public Circle(double radius)
         {
@@ -25,5 +28,6 @@
             return true;
         }
     }
+    
 }
 

@@ -1,10 +1,13 @@
 ﻿namespace TaskLibrary
 {
+    /// <summary>
+    /// Треугольник
+    /// </summary>
     public struct Triangle : IShape, IRightAngle
     {
-        private double _a { get; }
-        private double _b { get; }
-        private double _c { get; }
+        private double _a;
+        private double _b;
+        private double _c;
 
         public Triangle(double a, double b, double c)
         {
